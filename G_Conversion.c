@@ -3,8 +3,10 @@
 
 int main(void)
 {
-    char s[1002];
-    fgets(s, 1002, stdin);
+    char s[100002];
+    fgets(s, 100002, stdin);
+
+    // s[strlen(s) - 1] = '\0';
 
     for (int i = 0; s[i] != '\0'; i++)
     {
