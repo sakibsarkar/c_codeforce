@@ -15,15 +15,21 @@ public:
 
 bool compare(Student a, Student b)
 {
-    int total_a = a.math_marks + a.english_marks;
-    int total_b = b.math_marks + b.english_marks;
-    if (total_a == total_b)
+
+    if (a.english_marks == b.english_marks)
     {
-        return a.id < b.id;
+        if (a.math_marks == b.math_marks)
+        {
+            return a.id < b.id;
+        }
+        else
+        {
+            return a.math_marks > b.math_marks;
+        }
     }
     else
     {
-        return total_a > total_b;
+        return a.english_marks > b.english_marks;
     }
 };
 int main()
